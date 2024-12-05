@@ -1,0 +1,51 @@
+<div class="form-container">
+    <h1 class="form-description-title">Select your plan</h1>
+    <p class="form-description">You have the option of monthly or yearly billing.</p>
+  <div class="card">
+    <div class="pricing-container">
+      <div class=" option">
+  <img class="icon" src="../assets/images/icon-arcade.svg" alt="">   
+  <div class="bills">
+    <h2>Arcade</h2>
+          <p>$9/mo</p>
+      </div>
+  </div>   
+  
+      <div class="option">
+  <img class="icon" src="../assets/images/icon-advanced.svg" alt="">
+  <div class="bills">
+    <h2>Advanced</h2>
+    <p>$12/mo</p>
+  </div>
+  
+      </div>
+      <div class="option">
+  <img class="icon" src="../assets/images/icon-pro.svg" alt="">    
+  <div class="bills">
+    <h2>Pro</h2>
+    <p>$15/mo</p>  
+  </div>
+  
+      </div>
+  </div>
+  </div>
+
+  
+  <div class="toggle-container">
+    <div class="period-container">
+      <span class="period active">Monthly</span>
+      <label class="switch">
+          <input type="checkbox" id="toggleSwitch">
+          <span class="slider"></span>
+      </label>
+      <span class="period">Yearly</span>
+    </div>
+  
+  </div>
+
+
+  <footer>
+    <button class="back-button" (click)="goBack()">Go Back</button>
+    <button class="next-button" (click)="goToNextPage()" type="submit">Next Step</button>
+  </footer>
+  </div> 

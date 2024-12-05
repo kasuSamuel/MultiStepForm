@@ -26,6 +26,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    cursor: pointer;
   }
   
   .step:last-child {
@@ -48,8 +49,9 @@
 
   }
   
-  .step-circle.active {
-    background-color: #99c0ff; /* Light blue for the active step */
+  .active {
+    background-color: #99c0ff; 
+    border: none;
   }
   
   .step-details {
@@ -73,124 +75,28 @@
   }
   
 
-  .form-container {
-    background-color:  transparent;
-    padding: 2rem;
-    width: 450px;
-height: 372px;
-opacity: 0px;
-position: absolute;
-right:  10%;
-top: 30px;
-}
+ 
 
-.form-description-title{
-width: 100%;
-    height: 31px;
-font-size: 32px;
-font-weight: 700;
-line-height: 36.77px;
-text-align: left;
-color: var(--denim);
-margin-bottom: 30px;
 
-}
 
-.form-description{
-width: 100%;
-height: 20px;
-font-size: 16px;
-font-weight: 400;
-line-height: 20px;
-text-align: left;
-color: var(--grey);
-margin-bottom: 20px;
-}
+@media (max-width: 480px) {
 
-.form{
-    width: 100%;
-    height: 265px;
-}
+    .container {
+        width: 100%;
+        height: 376px;
+        background-image: url('../assets/images/bg-sidebar-mobile.svg') ;
+        background-position: 0px 0px;
+        background-size: 100% auto;
+        border-radius: 0;
+        display: block;   
+    }
 
-label {
-    color: var(--denim);
-    display: block;
-    margin-bottom: 10px;
-font-size: 14px;
-font-weight: 700;
-line-height: 16.09px;
-text-align: left;
+    .step-container {
+        display: flex;
+    }
 
-}
-
-input {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 32px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    font-size: 1rem;
-    color: #333;
-    background-color: transparent;
-    outline: none;
-    cursor: pointer;
-
-}
-
-input::placeholder {
-    color: var(--grey);
-}
-
-input:focus {
-    border-color: var(--purple);
-    color: var(--denim);
-}
-input:hover {
-    border-color: var(--purple);
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  position: absolute;
-  bottom: 50px;
-  right: 110px;
-  width: 460px;
-    height: 48px;
-}
-.next-button {
-    background-color: var(--denim);
-    color: var(--white);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-    width: 123px;
-height: 48px;
-border-radius: 8px;
-font-family: Ubuntu;
-font-size: 16px;
-font-weight: 500;
-line-height: 18.38px;
-position: absolute;
-right: 0px;
-
-}
-
-.next-button:hover {
-    background-color: var(--denim-hover);
-    color: var(--white);
-}
-
-.back-button {
-    background-color: transparent;
-    color: var(--denim);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-font-family: Ubuntu;
-font-size: 16px;
-font-weight: 500;
-line-height: 18.38px;
-/* display: none; */
-}
+    .step-details{
+        display: none;
+    }
+    
+  }

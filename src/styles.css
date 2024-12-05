@@ -4,6 +4,7 @@
     --border-color: #D6D9E6;
     --denim: #022959;
     --denim-hover: #164A8A;
+    --purple-hover: #928CFF;
     --grey: #9699AA;
     --light-blue: #ABBCFF;
     --light-grey: #D6D9E6;
@@ -30,3 +31,12 @@
         font-family: 'Ubuntu', sans-serif;
 
 }
+
+@media (max-width: 480px) {
+
+    body {
+        width: 100%;
+        display: block;
+    }
+    
+  }
