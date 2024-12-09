@@ -1,0 +1,33 @@
+
+.last-page{
+    background-color:  transparent;
+    width: 450px;
+height: 372px;
+opacity: 0px;
+position: absolute;
+right:  10%;
+top: 100px;   
+display: flex;
+    flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+  }
+
+  .thank-you{
+font-family: Ubuntu;
+font-size: 32px;
+font-weight: 700;
+line-height: 36.77px;
+text-align: center;
+color: var(--denim);
+
+}
+.thank-you-detail{
+font-family: Ubuntu;
+font-size: 16px;
+font-weight: 400;
+line-height: 25px;
+text-align: center;
+color: var(--grey);
+}

@@ -1,12 +1,11 @@
 <div class="container">
   <div class="step-container">
     <div (click)="goToPersonalInfor()" 
-         class="step" 
-         >
+         class="step">
       <div class="step-circle" [ngClass]="{'active': activeStep === 1}">1</div>
       <div class="step-details">
         <p class="step-number">Step 1</p>
-        <p class="step-title">Your Info</p>
+        <p class="step-title">Your Info</p> 
       </div>
     </div>
   
@@ -38,6 +37,8 @@
         <p class="step-title">Summary</p>
       </div>
     </div>
+
+
   </div>
   
 <router-outlet></router-outlet>

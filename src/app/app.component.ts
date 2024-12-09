@@ -5,11 +5,12 @@ import { FinishingUpComponent } from './finishing-up/finishing-up.component';
 import { PlanSelectionComponent } from './plan-selection/plan-selection.component';
 import { PickAddComponent } from './pick-add/pick-add.component';
 import { CommonModule } from '@angular/common';
+import { ThankYouPageComponent } from './thank-you-page/thank-you-page.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,PersonalInforComponent,PlanSelectionComponent,PickAddComponent,FinishingUpComponent, CommonModule],
+  imports: [RouterOutlet,PersonalInforComponent,PlanSelectionComponent,PickAddComponent,FinishingUpComponent,ThankYouPageComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

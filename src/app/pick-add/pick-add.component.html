@@ -2,46 +2,32 @@
     <h1 class="form-description-title">Pick add-ons</h1>
     <p class="form-description">Add-ons help enhance your gaming experience.</p>
   
+
+
     <div class="checkbox-container">
-      <div class="checkbox-option">
+      <div class="checkbox-option"
+           *ngFor="let option of checkboxOptions" 
+           [ngClass]="{'selected': option.checked}" 
+           (click)="toggleCheckbox(option)">
         <div class="correct-checkbox">
-          <input type="checkbox" id="online-service" name="addons" value="online-service" />
+          <input type="checkbox" 
+                 [id]="option.id" 
+                 name="addons" 
+                 [(ngModel)]="option.checked" 
+                 [value]="option.id" /> 
         </div>
         <div class="checkbox-content">
           <div class="checkbox-text">
-            <p class="checkbox-title">Online service</p>
-            <p class="checkbox-description">Access to multiplayer games</p>
+            <p class="checkbox-title">{{ option.title }}</p>
+            <p class="checkbox-description">{{ option.description }}</p>
           </div>
-          <p class="checkbox-price">+$1/mo</p>
-        </div>
-      </div>
-  
-      <div class="checkbox-option">
-        <div class="correct-checkbox">
-          <input type="checkbox" id="larger-storage" name="addons" value="larger-storage" />
-        </div>
-        <div class="checkbox-content">
-          <div class="checkbox-text">
-            <p class="checkbox-title">Larger storage</p>
-            <p class="checkbox-description">Extra 1TB of cloud save</p>
-          </div>
-          <p class="checkbox-price">+$2/mo</p>
-        </div>
-      </div>
-  
-      <div class="checkbox-option">
-        <div class="correct-checkbox">
-          <input type="checkbox" id="custom-profile" name="addons" value="custom-profile" />
-        </div>
-        <div class="checkbox-content">
-          <div class="checkbox-text">
-            <p class="checkbox-title">Customizable profile</p>
-            <p class="checkbox-description">Custom theme on your profile</p>
-          </div>
-          <p class="checkbox-price">+$2/mo</p>
+          <p class= "checkbox-price">   {{ selectedPlan.isYearly ? option.year : option.month }}
+          </p>
         </div>
       </div>
     </div>
+
+    
     <footer>
       <button class="back-button" (click)="goBack()">Go Back</button>
       <button class="next-button" (click)="goToNextPage()" type="submit">Next Step</button>

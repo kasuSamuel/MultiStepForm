@@ -128,3 +128,14 @@ display: none;
   .border{
     border: 1px solid #e63946;
   }
+
+
+  @media (max-width: 480px) {
+.form-container{
+    background-color: var(--white);
+    top: 180px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+  }

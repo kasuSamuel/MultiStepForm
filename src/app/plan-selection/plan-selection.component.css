@@ -211,3 +211,15 @@ font-weight: 500;
 line-height: 18.38px;
 /* display: none; */
 }
+
+.option.selected {
+    border-color: #4c6ef5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .option.disabled {
+    opacity: 0.5;  /* Make disabled options look faded */
+    pointer-events: none;  /* Disable interaction with disabled options */
+  }
+
+  

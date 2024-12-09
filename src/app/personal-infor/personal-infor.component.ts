@@ -20,6 +20,7 @@ export class PersonalInforComponent {
     });
   }
 
+
   onSubmit() {
     if (this.formData.invalid) {
       // If form is invalid, add the 'border' class to inputs with errors
@@ -29,6 +30,7 @@ export class PersonalInforComponent {
       inputElements.forEach((element: any) => {
         if (element.value === '') {
           element.classList.add('border'); 
+          console.log(inputElements);
         }
       });
 
@@ -44,5 +46,6 @@ export class PersonalInforComponent {
 
   goToNextPage() {
     this.onSubmit();
+    console.log(this.formData.value);
   }
 }

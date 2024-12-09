@@ -7,7 +7,7 @@ opacity: 0px;
 position: absolute;
 right:  10%;
 top: 30px;
-}
+} 
 
 .form-description-title{
 width: 100%;
@@ -102,6 +102,10 @@ line-height: 18.38px;
 text-align: left;
 }
 
+.checkbox-option.selected {
+  border-color: var(--purple);
+  background-color: var(--light-grey);
+}
 
 footer {
   display: flex;
@@ -147,3 +151,8 @@ font-weight: 500;
 line-height: 18.38px;
 /* display: none; */
 }
+
+
+
+
+
