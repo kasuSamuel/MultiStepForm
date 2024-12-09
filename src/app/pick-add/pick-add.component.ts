@@ -85,7 +85,6 @@ export class PickAddComponent {
         }
     
         console.log('datang', data);
-        // Save the updated data to sessionStorage
         sessionStorage.setItem('optionData', JSON.stringify(data));
       }
 
