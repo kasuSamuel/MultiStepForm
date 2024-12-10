@@ -7,7 +7,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './personal-infor.component.html',
-  styleUrls: ['./personal-infor.component.css']
+  styleUrls: ['./personal-infor.component.css'],
+  
 })
 export class PersonalInforComponent {
   formData: FormGroup;
@@ -39,7 +40,6 @@ export class PersonalInforComponent {
       });
       return;
     }
-
     // Form is valid, navigate to the next page
     this.router.navigate(['/plan-selection']);
   }
