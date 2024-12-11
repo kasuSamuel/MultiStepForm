@@ -156,3 +156,18 @@ line-height: 18.38px;
 
 
 
+@media (max-width: 480px) {
+  .form-container{
+      background-color: var(--white);
+      width: 70%;
+      height: 70%;
+      border-radius: 10px;
+      right:  8%;
+  top: 19%;
+  }
+  footer {
+    width: 100%;
+       top: 35rem;
+       left: 0;
+    }
+}

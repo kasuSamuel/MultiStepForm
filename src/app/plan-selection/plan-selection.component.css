@@ -222,4 +222,46 @@ line-height: 18.38px;
     pointer-events: none;  /* Disable interaction with disabled options */
   }
 
-  
+  @media (max-width: 480px) {
+    .form-container{
+        background-color: var(--white);
+        width: 70%;
+        height: 93%;
+        border-radius: 10px;
+        right:  8%;
+    top: 19%;
+    }
+    
+
+    .pricing-container {
+        display: block;
+    }
+
+.option{
+    width: 15rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    
+}
+
+.innerContent {
+    display: flex;
+
+}
+.bills {
+    margin-left: 12px;
+}
+
+.toggle-container{
+    margin-top: 19rem;
+    width: 100%;
+
+}
+    
+footer {
+    width: 100%;
+       top: 47rem;
+       left: 0;
+    }
+      }
