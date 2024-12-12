@@ -75,6 +75,13 @@ input:hover {
     border-color: var(--purple);
 }
 
+
+.footer {
+    position: absolute;
+    right: 30px;
+    top: 30rem;
+}
+
 .next-button {
     background-color: var(--denim);
     color: var(--white);
@@ -88,9 +95,7 @@ font-family: Ubuntu;
 font-size: 16px;
 font-weight: 500;
 line-height: 18.38px;
-position: absolute;
-right: 30px;
-top: 30rem;
+
 
 }
 
@@ -133,9 +138,26 @@ display: none;
   @media (max-width: 480px) {
 .form-container{
     background-color: var(--white);
-    top: 180px;
-    width: 80%;
+    width: 70%;
+    height: 70%;
     border-radius: 10px;
+    right:  8%;
+top: 19%;
 }
 
+.form{
+    width: 100%;
+    margin-top: 2rem;
+}
+.input-description{
+    width: 100%;
+}
+ input {
+    width: 90%;
+} 
+
+
+.footer {
+   top: 30rem;
+}
   }

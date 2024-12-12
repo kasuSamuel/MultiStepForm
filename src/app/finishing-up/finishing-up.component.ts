@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,34 +7,49 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './finishing-up.component.html',
-  styleUrl: './finishing-up.component.css'
+  styleUrls: ['./finishing-up.component.css']
 })
-export class FinishingUpComponent {
+export class FinishingUpComponent implements OnInit {
   isConfirmed = false;
+  plansData: any = [];
+  dataTwo: any = [];
+  amount: string = '';
+  totalAmount: number = 0;
+  sum: number = 0;
+  totalSum: number = 0;
 
-  constructor(private router: Router){}
-  plansData: any = sessionStorage.getItem('optionData') ? JSON.parse(sessionStorage.getItem('optionData')!) : null;
-  dataTwo: any = sessionStorage.getItem('selectedPlan') ? JSON.parse(sessionStorage.getItem('selectedPlan')!) : null;
+  constructor(private router: Router) { }
 
-amount: string = this.dataTwo.selectedPrice;
-totalAmount: number = parseFloat(this.amount.replace(/[^0-9.-]+/g, ""));
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.plansData = sessionStorage.getItem('optionData') ? JSON.parse(sessionStorage.getItem('optionData')!) : null;
+    this.dataTwo = sessionStorage.getItem('selectedPlan') ? JSON.parse(sessionStorage.getItem('selectedPlan')!) : null;
 
- sum: number = this.plansData.reduce((total: number, Data: { selectedPlanValue: string; }) => {
-  // Extract the number by removing the non-numeric characters
-  const numericValue = parseFloat(Data.selectedPlanValue.replace(/[^0-9.-]+/g, ""));
-  return total + numericValue;
-}, 0);
+    if (this.dataTwo) {
+      this.amount = this.dataTwo.selectedPrice;
+      this.totalAmount = parseFloat(this.amount.replace(/[^0-9.-]+/g, ""));
+    }
 
-totalSum :number = this.sum + this.totalAmount;
- toConfirm() {
-      this.router.navigate(['/thank-you']);
-}
+    if (this.plansData) {
+      this.sum = this.plansData.reduce((total: number, Data: { selectedPlanValue: string; }) => {
+        // Extract the number by removing the non-numeric characters
+        const numericValue = parseFloat(Data.selectedPlanValue.replace(/[^0-9.-]+/g, ""));
+        return total + numericValue;
+      }, 0);
+    }
 
-goBack() {
-  if (sessionStorage.getItem('optionData')) {
-    sessionStorage.removeItem('optionData');
+    this.totalSum = this.sum + this.totalAmount;
   }
-    this.router.navigate(['/pick-add-ons']);
-}
 
+  toConfirm() {
+    this.router.navigate(['/thank-you']);
+  }
+
+  goBack() {
+    if (sessionStorage.getItem('optionData')) {
+      sessionStorage.removeItem('optionData');
+    }
+    this.router.navigate(['/pick-add-ons']);
+  }
 }

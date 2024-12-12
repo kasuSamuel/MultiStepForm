@@ -36,7 +36,7 @@ export class PlanSelectionComponent {
       monthly: '$15/mo', 
       yearly: '$150/yr'
     }
-  ];
+  ]; 
 
 
 goToNextPage() {

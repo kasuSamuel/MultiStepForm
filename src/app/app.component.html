@@ -1,36 +1,30 @@
 <div class="container">
   <div class="step-container">
-    <div (click)="goToPersonalInfor()" 
-         class="step">
+    <div (click)="goToPersonalInfor()" class="step">
       <div class="step-circle" [ngClass]="{'active': activeStep === 1}">1</div>
       <div class="step-details">
         <p class="step-number">Step 1</p>
-        <p class="step-title">Your Info</p> 
+        <p class="step-title">Your Info</p>
       </div>
     </div>
-  
-    <div (click)="goToPlanSelection()" 
-         class="step" 
-         >
+
+    <div (click)="goToPlanSelection()" class="step">
       <div class="step-circle" [ngClass]="{'active': activeStep === 2}">2</div>
       <div class="step-details">
         <p class="step-number">Step 2</p>
         <p class="step-title">Select Plan</p>
       </div>
     </div>
-  
-    <div (click)="goToPickAddons()" 
-         class="step">
+
+    <div (click)="goToPickAddons()" class="step">
       <div class="step-circle" [ngClass]="{'active': activeStep === 3}">3</div>
       <div class="step-details">
         <p class="step-number">Step 3</p>
         <p class="step-title">Add-ons</p>
       </div>
     </div>
-  
-    <div (click)="goToFinishingup()" 
-         class="step" 
-         >
+
+    <div (click)="goToFinishingup()" class="step">
       <div class="step-circle" [ngClass]="{'active': activeStep === 4}">4</div>
       <div class="step-details">
         <p class="step-number">Step 4</p>
@@ -40,7 +34,7 @@
 
 
   </div>
-  
-<router-outlet></router-outlet>
+
+  <router-outlet></router-outlet>
 
 </div>
