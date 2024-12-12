@@ -28,6 +28,8 @@ export class AppComponent {
   goToPlanSelection(){
     this.router.navigate(['/plan-selection'])
     this.activeStep = 2;
+    sessionStorage.clear();
+    console.log("kasu");
 
 
   }

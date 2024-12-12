@@ -8,12 +8,15 @@
              class="option" 
              [ngClass]="{'selected': selectedOption === i}" 
              (click)="handleOptionClick(i)">
+             <div class="innerContent">
           <img class="icon" [src]="option.icon" alt="icon" />
           <div class="bills" [attr.data-plan]="isYearly ? 'yearly' : 'monthly'">
             <h2>{{ option.name }}</h2>
             <p>{{ isYearly ? option.yearly : option.monthly }}</p>
             <span>{{ isYearly ? '2 months free' : '' }}</span>
           </div>
+             </div>
+
         </div>
               </form>
     </div>
