@@ -23,6 +23,7 @@ export class AppComponent {
   goToPersonalInfor() {
     this.activeStep = 1;
     this.router.navigate(['/personal-infor']);
+ 
   }
 
   goToPlanSelection(){
