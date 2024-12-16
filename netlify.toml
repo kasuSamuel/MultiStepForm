@@ -1,7 +1,0 @@
-[build]
-base = "multi-step-form"
-  command = "npm run build --prod"
-publish = "dist/browser"
-
-[context.production.environment]
-  NODE_ENV = "production"
